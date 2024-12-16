@@ -1,23 +1,23 @@
-import { INodeType, INodeTypeDescription } from 'n8n-workflow';
-import { httpVerbFields, httpVerbOperations } from './HttpVerbDescription';
+import { NodeConnectionType, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
+import { httpVerbFields, httpVerbOperations } from './StabilityAIDescription';
 
-export class HttpBin implements INodeType {
+export class StabilityAI implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'HttpBin',
-		name: 'httpBin',
+		displayName: 'StabilityAI',
+		name: 'stabilityAi',
 		icon: 'file:httpbin.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Interact with HttpBin API',
 		defaults: {
-			name: 'HttpBin',
+			name: 'StabilityAI',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				name: 'httpbinApi',
+				name: 'stabilityaiApi',
 				required: false,
 			},
 		],

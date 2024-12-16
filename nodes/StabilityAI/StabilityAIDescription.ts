@@ -1,4 +1,4 @@
-import { INodeProperties } from 'n8n-workflow';
+import type { INodeProperties } from 'n8n-workflow';
 
 // When the resource `httpVerb` is selected, this `operation` parameter will be shown.
 export const httpVerbOperations: INodeProperties[] = [
@@ -24,6 +24,7 @@ export const httpVerbOperations: INodeProperties[] = [
 						url: '/get',
 					},
 				},
+				action: 'Get a http verb',
 			},
 			{
 				name: 'DELETE',
