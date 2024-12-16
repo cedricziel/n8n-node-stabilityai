@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - cedricziel
+    groups:
+      n8n:
+        patterns:
+          - n8n-*
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
+    open-pull-requests-limit: 25
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - cedricziel
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
