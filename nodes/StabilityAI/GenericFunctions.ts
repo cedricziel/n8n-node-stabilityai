@@ -73,15 +73,6 @@ export async function stabilityGenerateUltraRequest(
 
 		let mimeType = response.headers['content-type'] as string | undefined;
 		mimeType = mimeType ? mimeType.split(';').find((value) => value.includes('/')) : undefined;
-		const contentDisposition = response.headers['content-disposition'];
-		const fileNameRegex = /(?<=filename=").*\b/;
-		const match = fileNameRegex.exec(contentDisposition as string);
-		let fileName = '';
-
-		// file name was found
-		if (match !== null) {
-			fileName = match[0];
-		}
 
 		const newItem: INodeExecutionData = {
 			json: items[index].json,
@@ -160,15 +151,6 @@ export async function stabilityGenerateCoreRequest(
 
 		let mimeType = response.headers['content-type'] as string | undefined;
 		mimeType = mimeType ? mimeType.split(';').find((value) => value.includes('/')) : undefined;
-		const contentDisposition = response.headers['content-disposition'];
-		const fileNameRegex = /(?<=filename=").*\b/;
-		const match = fileNameRegex.exec(contentDisposition as string);
-		let fileName = '';
-
-		// file name was found
-		if (match !== null) {
-			fileName = match[0];
-		}
 
 		const newItem: INodeExecutionData = {
 			json: items[index].json,
@@ -253,15 +235,6 @@ export async function stabilityGenerateSd3Request(
 
 		let mimeType = response.headers['content-type'] as string | undefined;
 		mimeType = mimeType ? mimeType.split(';').find((value) => value.includes('/')) : undefined;
-		const contentDisposition = response.headers['content-disposition'];
-		const fileNameRegex = /(?<=filename=").*\b/;
-		const match = fileNameRegex.exec(contentDisposition as string);
-		let fileName = '';
-
-		// file name was found
-		if (match !== null) {
-			fileName = match[0];
-		}
 
 		const newItem: INodeExecutionData = {
 			json: items[index].json,
