@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/cedricziel/n8n-nodes-stabilityai/compare/v1.0.3...v1.0.4) (2024-12-17)
+
+
+### Bug Fixes
+
+* add stability logo ([264ed73](https://github.com/cedricziel/n8n-nodes-stabilityai/commit/264ed73792242d9de307820050cf0c1d3947f255))
+
 ## [1.0.3](https://github.com/cedricziel/n8n-nodes-stabilityai/compare/v1.0.2...v1.0.3) (2024-12-17)
 
 
