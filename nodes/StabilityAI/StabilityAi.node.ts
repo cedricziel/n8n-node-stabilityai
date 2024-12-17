@@ -22,7 +22,7 @@ export class StabilityAi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'StabilityAI',
 		name: 'stabilityAi',
-		icon: 'file:httpbin.svg',
+		icon: 'file:stabilityai.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
