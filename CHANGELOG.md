@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5](https://github.com/cedricziel/n8n-nodes-stabilityai/compare/v1.0.4...v1.0.5) (2024-12-17)
+
+
+### Bug Fixes
+
+* remove unused ([b5ee94f](https://github.com/cedricziel/n8n-nodes-stabilityai/commit/b5ee94f0d7f61e373ff762661f3afc88933fb116))
+* set image name ([37d7e29](https://github.com/cedricziel/n8n-nodes-stabilityai/commit/37d7e29a3372af7a8b5ea49d40c992fee6709929))
+
 ## [1.0.4](https://github.com/cedricziel/n8n-nodes-stabilityai/compare/v1.0.3...v1.0.4) (2024-12-17)
 
 
