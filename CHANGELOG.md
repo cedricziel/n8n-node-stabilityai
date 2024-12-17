@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/cedricziel/n8n-nodes-stabilityai/compare/v1.0.2...v1.0.3) (2024-12-17)
+
+
+### Bug Fixes
+
+* reference pnpm ([df3ead7](https://github.com/cedricziel/n8n-nodes-stabilityai/commit/df3ead731e116532cb77a9ef7c825f63e9263eb8))
+
 ## [1.0.2](https://github.com/cedricziel/n8n-nodes-stabilityai/compare/v1.0.1...v1.0.2) (2024-12-17)
 
 
