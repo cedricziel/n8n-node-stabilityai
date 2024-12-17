@@ -47,12 +47,14 @@
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.56.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "form-data": "^4.0.1",
     "gulp": "^4.0.2",
     "n8n-workflow": "*",
     "prettier": "^3.3.2",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
+    "form-data": "^4.0.1",
     "n8n-workflow": "*"
   }
 }
