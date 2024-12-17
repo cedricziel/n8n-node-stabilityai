@@ -98,7 +98,7 @@ export async function stabilityGenerateUltraRequest(
 		newItem.binary = {
 			[output]: await this.helpers.prepareBinaryData(
 				response.body as unknown as Buffer,
-				fileName,
+				`image.${request.output_format}`,
 				mimeType,
 			),
 		};
@@ -185,7 +185,7 @@ export async function stabilityGenerateCoreRequest(
 		newItem.binary = {
 			[output]: await this.helpers.prepareBinaryData(
 				response.body as unknown as Buffer,
-				fileName,
+				`image.${request.output_format}`,
 				mimeType,
 			),
 		};
@@ -278,7 +278,7 @@ export async function stabilityGenerateSd3Request(
 		newItem.binary = {
 			[output]: await this.helpers.prepareBinaryData(
 				response.body as unknown as Buffer,
-				fileName,
+				`image.${request.output_format}`,
 				mimeType,
 			),
 		};
