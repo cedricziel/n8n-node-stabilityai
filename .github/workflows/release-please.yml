@@ -21,6 +21,7 @@ jobs:
       - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
       - uses: pnpm/action-setup@v2
+        if: ${{ steps.release.outputs.release_created }}
         with:
           version: 9.1.4
       - uses: actions/setup-node@v4
@@ -28,13 +29,13 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: pmpm install
+      - run: pnpm install
         if: ${{ steps.release.outputs.release_created }}
-      - run: pmpm run lint
+      - run: pnpm run lint
         if: ${{ steps.release.outputs.release_created }}
-      - run: pmpm run build
+      - run: pnpm run build
         if: ${{ steps.release.outputs.release_created }}
-      - run: pmpm publish
+      - run: pnpm publish
         if: ${{ steps.release.outputs.release_created }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
