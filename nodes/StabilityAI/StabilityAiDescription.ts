@@ -80,7 +80,6 @@ export const imageServiceOperations: INodeProperties[] = [
 		name: 'image',
 		type: 'string',
 		default: undefined,
-		required: false,
 		displayOptions: {
 			show: {
 				resource: ['image'],
