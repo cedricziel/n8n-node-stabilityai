@@ -1,14 +1,14 @@
-import {
+import type {
 	IAuthenticateGeneric,
 	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class HttpBinApi implements ICredentialType {
-	name = 'stabilityaiApi';
+export class StabilityAiApi implements ICredentialType {
+	name = 'stabilityAiApi';
 	displayName = 'StabilityAI API';
-	documentationUrl = '<your-docs-url>';
+	documentationUrl = 'https://github.com/cedricziel/n8n-nodes-stabilityai';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Token',
@@ -17,13 +17,14 @@ export class HttpBinApi implements ICredentialType {
 			default: '',
 			typeOptions: {
 				password: true,
-			}
+			},
 		},
 		{
-			displayName: 'Domain',
-			name: 'domain',
+			displayName: 'Base URL',
+			name: 'baseURL',
 			type: 'string',
-			default: 'https://httpbin.org',
+			default: 'https://api.stability.ai',
+			required: true,
 		},
 	];
 
@@ -43,8 +44,8 @@ export class HttpBinApi implements ICredentialType {
 	// The block below tells how this credential can be tested
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: '={{$credentials?.domain}}',
-			url: '/bearer',
+			baseURL: 'https://api.stability.ai',
+			url: '/v1/user/account',
 		},
 	};
 }
